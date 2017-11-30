@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "src/app/sass/components/_badges.css",
+    "inputFile": "src/app/sass/components/_badges.scss"
+  },
+  {
+    "outputFile": "src/app/sass/components/date_picker/_default.date.css",
+    "inputFile": "src/app/sass/components/date_picker/_default.date.scss"
+  }
+]
