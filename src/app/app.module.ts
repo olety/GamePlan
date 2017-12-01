@@ -3,22 +3,26 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DayComponent } from './day/day.component';
 import { ShopComponent } from './shop/shop.component';
 import { ChatComponent } from './chat/chat.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { CalendarComponent } from './calendar/calendar.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ShopComponent,
-    ChatComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        DayComponent,
+        ShopComponent,
+        ChatComponent,
+        CalendarComponent,
+        LoginComponent
+    ],
+    imports: [
+        BrowserModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
