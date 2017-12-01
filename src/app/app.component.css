@@ -8,11 +8,19 @@ header, footer {
     background: linear-gradient(to top, black, grey);
 }
 
+header {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
 main {
     width: 100%;
     height: calc(100% - 60px);
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
+    padding-bottom: 30px;
 }
 
 footer {
@@ -38,5 +46,64 @@ a {
 }
 
 footer a, footer p {
-    color: white;
+    color: rgba(255, 255, 255, .7);
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, .9);
+    transition-duration: .5s;
+}
+
+nav > span {
+    color: rgba(255, 255, 255, .7);
+}
+
+nav > span:active {
+    color: rgba(255, 255, 255, .9);
+}
+
+nav > span:hover {
+    cursor: pointer;
+}
+
+nav > .menu {
+    visibility: hidden;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    background-color: #f3f3f5;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.3);
+}
+
+nav > .menu a {
+    color: rgba(0, 0, 0, .7) !important;
+    text-shadow: none;
+}
+
+nav > .menu a:hover {
+    color: rgba(0, 0, 0, .9) !important;
+}
+
+header p {
+    margin: 0;
+}
+
+header > * {
+    display: inline-block;
+    color: rgba(255, 255, 255, .7);
+}
+
+header > nav, header > span {
+    width: calc((100% - 85px) / 2)
+}
+
+header > span > * {
+    float: right;
+}
+
+header > p {
+    font-weight: bold;
 }

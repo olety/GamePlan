@@ -1,3 +1,56 @@
-<p>
-  chat works!
-</p>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/rltm/web/rltm.js"></script>
+<script src="bower_components/angular-chat/angular-chat.js"></script>
+
+<script>
+    // AngularJS Chat Configuration
+    var chat = angular.module( 'BasicChat', ['chat'] );
+    angular.module('chat').constant('config', {
+        rltm: {
+            service: "pubnub",
+            config: {
+                publishKey: "pub-c-e2bb2ca0-bf49-4093-b27b-06f891e42d88",
+                subscribeKey: "sub-c-f70dbbbe-d6cf-11e7-9120-025833df6940"
+            }
+        }
+    });
+
+    chat.controller('chat', ['Messages', '$scope', function (Messages, $scope) {
+
+        $scope.messages = [{ user: "1", data: "Hi!" }];
+
+        Messages.receive(function (message) {
+            $scope.messages.push(message);
+        });
+
+        $scope.send = function () {
+            Messages.user({ id: 1, name: "name" });
+            Messages.send({ 
+                data: $scope.textbox 
+            });
+        };
+
+
+    }]);
+
+    Messages.user({ id: 1, name: "name" });
+    Messages.send({ to: 1, data: "sample message" });
+
+</script>
+
+<h1>Group Chat</h1>
+<div class="chat-container">
+    <div class="chat">
+        <div ng-app="BasicChat">
+            <div ng-controller="chat">
+                <div class="messages-container" ng-repeat="message in messages">
+                    <strong>{{message.user}}:</strong>
+                    <span>{{message.data}}</span>
+                </div>
+                <form ng-submit="send()">
+                    <input ng-model="textbox">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

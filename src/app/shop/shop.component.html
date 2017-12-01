@@ -1,9 +1,43 @@
 <h1>Shop</h1>
-<div class="shop-container">
+<div class="shop-container" ng-app="myApp" ng-controller="sampleCtrl">
     <div class="shop-department">
         <h3>Themes</h3>
         <div class="products-container">
-
+            <div class="well">
+                <div paging
+                     page="35" 
+                     page-size="10" 
+                     total="1000">
+                </div>
+            </div>
+            <div class="well">
+                <div class="form-group">
+                    <label>Current Page:</label>
+                    <input placeholder="page"
+                           class="form-control"
+                           maxlength="16"
+                           ng-model="currentPage"
+                           ng-init="currentPage = 1" />
+                </div>
+                <div class="form-group">
+                    <label>Page Size:</label>
+                    <input placeholder="Page Size"
+                           class="form-control"
+                           maxlength="16"
+                           ng-model="pageSize"
+                           ng-init="pageSize = 10" />
+                </div>
+                <div class="form-group">
+                    <label>Total Items:</label>
+                    <input placeholder="Total"
+                           class="form-control"
+                           maxlength="16"
+                           ng-model="total"
+                           ng-init="total = 1000" />
+                </div>
+            </div>
+            <script src="https://gist.github.com/brantwills/3117b5182d12b8feb106.js"></script>
+            <hr />
         </div>
     </div>
     <div class="shop-department">

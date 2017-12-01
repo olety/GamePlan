@@ -1,6 +1,38 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <header>
-
+    <nav>
+        <span class="menu-btn" onclick="var a = document.getElementsByClassName('menu')[0].style.visibility;
+        if (a == 'visible') {
+            document.getElementsByClassName('menu')[0].style.visibility = 'hidden';
+        } else {
+            document.getElementsByClassName('menu')[0].style.visibility = 'visible';
+        }">
+        Menu</span>
+        <div class="menu">
+            <a routerLink="/calendar">
+                <div class="menu-item">Calendar</div>
+            </a>
+            <a routerLink="/day">
+                <div class="menu-item">Task list - Today</div>
+            </a>
+            <a routerLink="/chat">
+                <div class="menu-item">Group</div>
+            </a>
+            <a routerLink="/shop">
+                <div class="menu-item">Shop</div>
+            </a>
+            <a routerLink="/">
+                <div class="menu-item">Sign out</div>
+            </a>
+        </div>
+    </nav>
+    <p>GamePlan</p>
+    <span>
+        <a routerLink="/">Sign out</a>
+        <span class="gold"></span>
+        <p style="display: inline-block">Welcome User!</p>
+    </span>
+    
 </header>
 
 <main>
