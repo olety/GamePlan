@@ -1,18 +1,21 @@
-h1 {
+h1, h3 {
     text-align: center;
     margin: 20px auto;
 }
 
 .shop-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    width: 80%;
+    margin: 10px auto;
 }
 
 .shop-department {
-    flex-grow: 1;
-    justify-content: space-between;
     display: inline-block;
     box-shadow: 0 1px 3px 1px rgba(0,0,0,.3);
     height: 300px;
+    width: 45%;
+    float: left;
+}
+
+.shop-department:nth-child(2) {
+    float: right;
 }

@@ -8,6 +8,7 @@ import { ShopComponent } from './shop/shop.component';
 import { ChatComponent } from './chat/chat.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
         LoginComponent
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        AppRoutingModule
     ],
     providers: [],
     bootstrap: [AppComponent]
