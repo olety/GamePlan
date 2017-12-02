@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <header>
-    <nav>
+    <nav class="hide">
         <span class="menu-btn" onclick="var a = document.getElementsByClassName('menu')[0].style.visibility;
         if (a == 'visible') {
             document.getElementsByClassName('menu')[0].style.visibility = 'hidden';
@@ -27,8 +27,9 @@
         </div>
     </nav>
     <p>GamePlan</p>
-    <span>
-        <a routerLink="/">Sign out</a>
+
+    <span class="hide">
+        <a routerLink="/login">Sign out</a>
         <span class="gold"></span>
         <p style="display: inline-block">Welcome User!</p>
     </span>
