@@ -1,39 +1,52 @@
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--The content below is only a placeholder and can be replaced.-->
 <header>
+<<<<<<< HEAD
     <nav class="hide">
         <span class="menu-btn" onclick="var a = document.getElementsByClassName('menu')[0].style.visibility;
+=======
+    <nav>
+        <div class="menu-btn" onclick="var a = document.getElementsByClassName('menu')[0].style.visibility;
+>>>>>>> 906020f0f865d6f7c64eb0dabbb8d212c00d739d
         if (a == 'visible') {
             document.getElementsByClassName('menu')[0].style.visibility = 'hidden';
         } else {
             document.getElementsByClassName('menu')[0].style.visibility = 'visible';
         }">
-        Menu</span>
+            <span><img src="../assets/bars.svg" height="20" width="20" />Menu</span>
+        </div>
         <div class="menu">
-            <a routerLink="/calendar">
+            <a routerLink="/calendar" onclick="document.getElementsByClassName('menu')[0].style.visibility = 'hidden';">
                 <div class="menu-item">Calendar</div>
             </a>
-            <a routerLink="/day">
+            <a routerLink="/day" onclick="document.getElementsByClassName('menu')[0].style.visibility = 'hidden';">
                 <div class="menu-item">Task list - Today</div>
             </a>
-            <a routerLink="/chat">
+            <a routerLink="/chat" onclick="document.getElementsByClassName('menu')[0].style.visibility = 'hidden';">
                 <div class="menu-item">Group</div>
             </a>
-            <a routerLink="/shop">
+            <a routerLink="/shop" onclick="document.getElementsByClassName('menu')[0].style.visibility = 'hidden';">
                 <div class="menu-item">Shop</div>
             </a>
-            <a routerLink="/">
+            <a routerLink="/" onclick="document.getElementsByClassName('menu')[0].style.visibility = 'hidden';">
                 <div class="menu-item">Sign out</div>
             </a>
         </div>
     </nav>
     <p>GamePlan</p>
+<<<<<<< HEAD
 
     <span class="hide">
         <a routerLink="/login">Sign out</a>
         <span class="gold"></span>
+=======
+    <span>
+        <a routerLink="/">Sign out<img src="../assets/sign-out.svg" width="20" height="20" /></a>
+        <span class="gold"><img src="../assets/coin.png" width="10" height="10" /> 21</span>
+>>>>>>> 906020f0f865d6f7c64eb0dabbb8d212c00d739d
         <p style="display: inline-block">Welcome User!</p>
     </span>
-    
+
 </header>
 
 <main>
@@ -45,6 +58,6 @@
         <p>&copy; GamePlan Team, 2017</p>
     </div>
     <div class="float-right">
-        <a href="mailto:gameplanteam@gmail.com?Subject=GamePlan" target="_top">Email us</a>
+        <a href="mailto:gameplanteam@gmail.com?Subject=GamePlan" target="_top">Email us<img src="../assets/envelope.svg" height="20" width="20" /></a>
     </div>
 </footer>

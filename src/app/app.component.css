@@ -57,16 +57,13 @@ footer a:hover {
     transition-duration: .5s;
 }
 
-nav > span {
+nav > .menu-btn {
     color: rgba(255, 255, 255, .7);
 }
 
-nav > span:active {
-    color: rgba(255, 255, 255, .9);
-}
-
-nav > span:hover {
+nav > .menu-btn:hover {
     cursor: pointer;
+    color: rgba(255, 255, 255, .9);
 }
 
 nav > .menu {
@@ -106,4 +103,59 @@ header > span > * {
 
 header > p {
     font-weight: bold;
+}
+
+nav > .menu-btn img {
+    opacity: .7;
+    margin-bottom: -5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+nav > .menu-btn {
+    display: inline-block;
+}
+
+header > span {
+    vertical-align: middle;
+}
+
+header > span > * {
+    margin-left: 20px;
+}
+
+header > span > a > img {
+    opacity: .7;
+    margin-bottom: -5px;
+    margin-left: 5px;
+}
+
+header > span > a > img:hover {
+    opacity: .9;
+}
+
+nav, header > p {
+    vertical-align: sub;
+}
+
+nav {
+    background-color: transparent;
+    line-height: 20px;
+    height: 20px;
+    box-shadow: none;
+}
+
+.menu-item {
+    border-top: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+footer a > img {
+    vertical-align: bottom;
+    margin-left: 5px;
+    opacity: .7;
+}
+
+footer a > img:hover {
+    opacity: .9;
 }
