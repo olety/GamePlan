@@ -138,6 +138,13 @@ nav, header > p {
     vertical-align: sub;
 }
 
+nav {
+    background-color: transparent;
+    line-height: 20px;
+    height: 20px;
+    box-shadow: none;
+}
+
 .menu-item {
     border-top: 1px solid #ccc;
     padding: 10px 20px;
