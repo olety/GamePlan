@@ -4,7 +4,7 @@
 
 <script>
     // AngularJS Chat Configuration
-    var chat = angular.module( 'BasicChat', ['chat'] );
+    var chat = angular.module('chat', ['chat']);
     angular.module('chat').constant('config', {
         rltm: {
             service: "pubnub",
@@ -15,16 +15,15 @@
         }
     });
 
-    chat.controller('chat', ['Messages', '$scope', function (Messages, $scope) {
+    chat.controller('chatCtrl', ['Messages', '$scope', function (Messages, $scope) {
 
-        $scope.messages = [{ user: "1", data: "Hi!" }];
+        $scope.messages = [];
 
         Messages.receive(function (message) {
             $scope.messages.push(message);
         });
 
         $scope.send = function () {
-            Messages.user({ id: 1, name: "name" });
             Messages.send({ 
                 data: $scope.textbox 
             });
@@ -33,23 +32,32 @@
 
     }]);
 
-    Messages.user({ id: 1, name: "name" });
-    Messages.send({ to: 1, data: "sample message" });
+    //setting user and message
+
+    //Messages.user({ id: 1, name: "name" });
+    //Messages.send({ to: 1, data: "sample message" });
 
 </script>
 
 <h1>Group Chat</h1>
 <div class="chat-container">
     <div class="chat">
-        <div ng-app="BasicChat">
-            <div ng-controller="chat">
-                <div class="messages-container" ng-repeat="message in messages">
-                    <strong>{{message.user}}:</strong>
-                    <span>{{message.data}}</span>
+        <div ng-app="chat">
+            <div class="messaging-container"> <!--ng-controller="chatCtrl" ng-init="messages='[]'">-->
+                <div class="messages-container">
+                    <div class="message" *ngFor="let message of messages">
+                        <span class="bold">{{message.user}}:</span>
+                        <span>{{message.data}}</span>
+                        <br />
+                    </div>
                 </div>
                 <form ng-submit="send()">
-                    <input ng-model="textbox">
+                    <input [(ngModel)]="message.data" [ngModelOptions]="{standalone: true}">
                 </form>
+                <span class="emoji-btn"><img src="../../assets/smile.svg" width="43" height="43" /></span>
+            </div>
+            <div class="members-list">
+
             </div>
         </div>
     </div>
