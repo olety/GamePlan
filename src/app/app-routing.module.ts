@@ -4,8 +4,8 @@ import { ShopComponent }        from './shop/shop.component';
 import { ChatComponent }        from './chat/chat.component';
 import { CalendarComponent }    from './calendar/calendar.component';
 import { DayComponent }         from './day/day.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent }       from './login/login.component';
+import { RegisterComponent }    from './register/register.component';
 
 const routes: Routes = [
     { path: 'shop', component: ShopComponent },
