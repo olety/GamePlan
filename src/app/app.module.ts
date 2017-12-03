@@ -12,6 +12,7 @@ import { ChatComponent } from './chat/chat.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './/app-routing.module';
         ShopComponent,
         ChatComponent,
         CalendarComponent,
-        LoginComponent
+        LoginComponent,
+        RegisterComponent
     ],
     imports: [
         BrowserModule,
