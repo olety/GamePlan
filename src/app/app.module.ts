@@ -30,12 +30,9 @@ import { RegisterComponent } from './register/register.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-<<<<<<< HEAD
         BrowserAnimationsModule,
-        CalendarModule.forRoot()
-=======
+        CalendarModule.forRoot(),
         FormsModule
->>>>>>> 09053e276d414713dd9e091ce8a25de2137c8871
     ],
     providers: [],
     bootstrap: [AppComponent]

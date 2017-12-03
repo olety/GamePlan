@@ -20,46 +20,42 @@
   </div>
 </ng-template>
 
-<div class="row text-center">
-  <div class="col-md-4">
+<div class="row text-center" style="display: inline-flex; margin-bottom: 26px; width: 100%">
+  <div class="col-md-4" style="margin: auto; font-weight: bold">
     <div class="btn-group">
-      <div class="btn btn-primary" style="display: inline-block"
+      <div class="btn btn-primary" style="margin-left: 310px; margin-top:36px; cursor: pointer"
            mwlCalendarPreviousView
            [view]="view"
            [(viewDate)]="viewDate"
            (viewDateChange)="activeDayIsOpen = false">
-        Previous
+        <div><img src="../../assets/ic_keyboard_arrow_left_black_24px.svg" style="vertical-align: top" /></div>
       </div>
-      <div class="btn btn-outline-secondary"
-           mwlCalendarToday
-           [(viewDate)]="viewDate">
-        Today
+      <div class="col-md-4" style="margin-left: 435px; margin-top: -40px">
+        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
       </div>
-      <div class="btn btn-primary"
+      <div class="btn btn-primary" style="margin-left: 660px; margin-top: -45px; cursor: pointer"
            mwlCalendarNextView
            [view]="view"
            [(viewDate)]="viewDate"
            (viewDateChange)="activeDayIsOpen = false">
-        Next
+        <div><img src="../../assets/ic_keyboard_arrow_right_black_24px.svg" style="vertical-align: top" /></div>
       </div>
     </div>
   </div>
+
   <div class="col-md-4">
-    <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
-  </div>
-  <div class="col-md-4">
-    <div class="btn-group">
-      <div class="btn btn-primary"
+    <div class="btn-group" style="display: inline-flex; margin-top: 36px; margin-left: 188px; background-color: violet; font-weight: bold">
+      <div class="btn btn-primary" style="cursor: pointer"
            (click)="view = 'month'"
            [class.active]="view === 'month'">
         Month
       </div>
-      <div class="btn btn-primary"
+      <div class="btn btn-primary" style="margin-left: 30px; cursor: pointer"
            (click)="view = 'week'"
            [class.active]="view === 'week'">
         Week
       </div>
-      <div class="btn btn-primary"
+      <div class="btn btn-primary" style="margin-left: 30px; cursor: pointer"
            (click)="view = 'day'"
            [class.active]="view === 'day'">
         Day
@@ -93,3 +89,5 @@
                          (eventTimesChanged)="eventTimesChanged($event)">
   </mwl-calendar-day-view>
 </div>
+
+<div class="btnnt"><img src="../../assets/ic_add_circle_black_24px.svg" height="40" width="40"/></div>

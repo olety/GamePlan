@@ -433,3 +433,10 @@
   border-color: transparent;
   border-style: solid;
 }
+
+.btnnt {
+  position: fixed;
+  right: 54px;
+  bottom: 68px;
+  cursor: pointer;
+}
