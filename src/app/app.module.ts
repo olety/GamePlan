@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { enableProdMode } from '@angular/core';
 import { MaterializeModule } from 'angular2-materialize';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'angular-calendar';
 
 
 import { AppComponent } from './app.component';
@@ -26,7 +28,9 @@ import { RegisterComponent } from './register/register.component';
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        CalendarModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
