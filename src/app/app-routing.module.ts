@@ -12,7 +12,7 @@ const routes: Routes = [
     { path: 'chat', component: ChatComponent },
     { path: 'calendar', component: CalendarComponent },
     { path: 'day', component: DayComponent },
-    { path: 'login', component: LoginComponent }
+    { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent }
 ];
 
