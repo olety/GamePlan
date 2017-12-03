@@ -15,7 +15,13 @@
     <div class="shop-department">
         <h3>Emoji</h3>
         <div class="products-container">
-
+            <div class="product emoji" *ngFor="let product of products2">
+                <div [ngStyle]="{'background-image': product.imagesrc}">
+                    <span class="buy-btn">
+                        BUY<span><img src="../../assets/coin.png" width="20" height="20" /> {{product.price}}</span>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

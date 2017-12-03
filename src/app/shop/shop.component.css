@@ -57,7 +57,7 @@ h3 {
     display: inline-block;
     padding: 5px;
     background-color: rgba(255, 255, 255, .7);
-    margin-top: calc(100% - 39px);
+    margin-top: 119px;
     font-weight: bold;
     font-size: 1.2em;
     text-align: center;
@@ -75,4 +75,9 @@ h3 {
 
 .product span.buy-btn > span img {
     vertical-align: sub;
+}
+
+.emoji > div {
+    background-repeat: no-repeat !important;
+    background-position: center;
 }
