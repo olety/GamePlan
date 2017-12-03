@@ -11,7 +11,7 @@ h1, h3 {
 .shop-department {
     display: inline-block;
     box-shadow: 0 1px 3px 1px rgba(0,0,0,.3);
-    height: 400px;
+    height: 450px;
     width: 45%;
     float: left;
     border: 5px solid #009688;
@@ -41,43 +41,53 @@ h3 {
 .product {
     display: inline-block;
     width: calc(50% - 15px);
-    height: calc(50% - 20px);
+    height: calc(50% - 38px);
     margin-left: 10px;
     margin-top: 10px;
     box-shadow: 0 1px 3px 1px rgba(0,0,0,.2);
+    margin-bottom: 5px;
 }
 
-.product > div {
+.product > li {
     height: 100%;
     background-repeat: repeat;
 }
 
-.product span.buy-btn {
+.product .buy-btn {
     width: 100%;
     display: inline-block;
     padding: 5px;
     background-color: rgba(255, 255, 255, .7);
-    margin-top: 119px;
+    margin-top: 124px;
     font-weight: bold;
     font-size: 1.2em;
     text-align: center;
     transition-duration: .5s;
 }
 
-.product span.buy-btn:hover {
+.product s.buy-btn:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, .8);
 }
 
-.product span.buy-btn > span {
+.product .buy-btn > span {
     margin-left: 10px;
 }
 
-.product span.buy-btn > span img {
+.product .buy-btn > span img {
     vertical-align: sub;
 }
 
-.emoji > div {
+.emoji > li {
     background-repeat: no-repeat !important;
     background-position: center;
+}
+
+.has-text-centered {
+    text-align: center;
+    background-color: #009688 !important;
+}
+
+.has-text-centered ul.ngx-pagination {
+    margin-bottom: 0;
 }

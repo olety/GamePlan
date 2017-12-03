@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { enableProdMode } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 import { MaterializeModule } from 'angular2-materialize';
 
 
@@ -28,7 +29,8 @@ import { RegisterComponent } from './register/register.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        NgxPaginationModule
     ],
     providers: [],
     bootstrap: [AppComponent]

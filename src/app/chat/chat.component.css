@@ -49,7 +49,7 @@ input {
 .members-list {
     display: inline-block;
     height: 390px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     margin-left: -3px;
     width: calc(30% - 5px);
     background-color: #f3f3f5;
@@ -73,4 +73,70 @@ input {
     display: block;
     background-color: white;
     box-shadow: 0 1px 3px 1px rgba(0,0,0,.075);
+}
+
+.emoji-btn > img:hover {
+    cursor: pointer;
+}
+
+.emoji-container {
+    height: 85px;
+    width: 200px;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.3);
+    margin-left: calc(70% - 52px);
+    margin-top: -142px;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: none;
+    background-color: white;
+}
+
+.emoji {
+    display: inline-block;
+    margin-left: 5px;
+    height: 35px;
+    width: 35px;
+}
+
+.member {
+    text-align: center;
+    padding: 5px;
+    margin: 10px 5px;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.125);
+    background-color: white;
+}
+
+.chat-heading {
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #9b26af;
+    display: block;
+    margin: 0;
+    padding: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
+
+.chat-heading h4  {
+    margin: 0;
+    color: white;
+}
+
+.add-member {
+    text-align: center;
+}
+
+.add-member img {
+    vertical-align: middle;
+}
+
+.add-member > *:hover {
+    cursor: pointer;
+}
+
+.add-member-popup {
+    background-color: white;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.3);
+    margin: 5px;
+    padding: 5px;
+    visibility: hidden;
 }

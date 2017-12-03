@@ -3,24 +3,30 @@
     <div class="shop-department" ng-app="chat">
         <h3>Themes</h3>
         <div class="products-container">
-            <div class="product" *ngFor="let product of products">
-                <div [ngStyle]="{'background-image': product.imagesrc}">
+            <ul class="product" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: page }">
+                <li [ngStyle]="{'background-image': product.imagesrc}">
                     <span class="buy-btn">
                         BUY<span><img src="../../assets/coin.png" width="20" height="20" /> {{product.price}}</span>
                     </span>
-                </div>
+                </li>
+            </ul>
+            <div class="has-text-centered">
+                <pagination-controls (pageChange)="page = $event"></pagination-controls>
             </div>
         </div>
     </div>
     <div class="shop-department">
         <h3>Emoji</h3>
         <div class="products-container">
-            <div class="product emoji" *ngFor="let product of products2">
-                <div [ngStyle]="{'background-image': product.imagesrc}">
+            <ul class="product emoji" *ngFor="let product of products2 | paginate: { itemsPerPage: 4, currentPage: page2 }">
+                <li [ngStyle]="{'background-image': product.imagesrc}">
                     <span class="buy-btn">
                         BUY<span><img src="../../assets/coin.png" width="20" height="20" /> {{product.price}}</span>
                     </span>
-                </div>
+                </li>
+            </ul>
+            <div class="has-text-centered">
+                <pagination-controls (pageChange)="page2 = $event"></pagination-controls>
             </div>
         </div>
     </div>
