@@ -436,7 +436,13 @@
 
 .btnnt {
   position: fixed;
-  right: 54px;
-  bottom: 68px;
+  right: 40px;
+  bottom: 50px;
   cursor: pointer;
+}
+
+.btn-add {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
 }

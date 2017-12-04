@@ -22,7 +22,7 @@ progress:before {
   content: attr(value)'/'attr(max) " Tasks";
   position: relative;
   /*left: 2.5%;*/
-  top: 2.2vh;
+  top: 24px;
   color: #303231;
 }
 
@@ -57,7 +57,7 @@ progress:before {
 
 .repeat {
     position: absolute;
-    bottom: 6vh;
+    bottom: 50px;
 }
 
 .btndiv {
@@ -76,6 +76,14 @@ progress:before {
 }
 
 .btn-add {
-    bottom: 8vh;
-    right: 3vh;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+}
+
+.btnnt {
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  cursor: pointer;
 }

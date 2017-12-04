@@ -10,6 +10,8 @@
   </div>
 </div>
 
+<span class="btn" routerLink="/shop" style="float: right; margin-right: 18%">Themes</span>
+
 <div class="container">
   <!-- Progress bar -->
   <div class="row">
@@ -73,7 +75,7 @@
             </div>
           </div>
 
-          <div class="btndiv">
+          <div class="btndiv" routerLink="/task">
             <div class="btn task-btn">
               {{task.completed == true ? "Revert" : "Complete"}}
             </div>
@@ -137,4 +139,4 @@
 
 
 
-<a href="/task" class="btn-floating btn-large waves-effect waves-light right btn-add"><i class="material-icons">add</i></a>
+<a class="btnnt" routerLink="/task"><img src="../../assets/ic_add_circle_black_24px.svg" height="40" width="40" /></a>
