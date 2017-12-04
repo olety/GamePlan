@@ -24,15 +24,17 @@
             <a routerLink="/shop" onclick="document.getElementsByClassName('menu')[0].style.visibility = 'hidden';">
                 <div class="menu-item">Shop</div>
             </a>
-            <a routerLink="/login" onclick="document.getElementsByClassName('menu')[0].style.visibility = 'hidden';">
+            <a routerLink="/login" onclick="document.getElementsByClassName('menu')[0].style.visibility = 'hidden';
+                  document.getElementsByClassName('signin')[0].style.visibility = 'hidden';
+                  document.getElementsByTagName('nav')[0].style.visibility = 'hidden'">
                 <div class="menu-item">Sign out</div>
             </a>
         </div>
     </nav>
     <p>GamePlan</p>
 
-    <span>
-        <a routerLink="/login">Sign out<img src="../assets/sign-out.svg" width="20" height="20" /></a>
+    <span class="signin">
+        <a routerLink="/login" onclick=" document.getElementsByClassName('signin')[0].style.visibility = 'hidden'; document.getElementsByTagName('nav')[0].style.visibility = 'hidden'">Sign out<img src="../assets/sign-out.svg" width="20" height="20" /></a>
         <span class="gold"><img src="../assets/coin.png" width="10" height="10" /> 21</span>
         <p style="display: inline-block">Welcome User!</p>
     </span>
