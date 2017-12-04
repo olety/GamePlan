@@ -1,3 +1,140 @@
-<p>
-  day works!
-</p>
+<br />
+
+<div class="container">
+  <div class="row center">
+    <h4>
+            <i class="material-icons ">keyboard_arrow_left</i>
+            {{today | date: "d'th' 'of' MMMM, yyyy"}}
+            <i class="material-icons">keyboard_arrow_right</i>
+        </h4>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Progress bar -->
+  <div class="row">
+    <div>
+      <h4>Your progress:</h4>
+    </div>
+    <div class="center-align">
+      <progress value="3" max="6"></progress>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<div class="container">
+  <!-- Task area -->
+  <div class="row">
+    <div>
+      <h4>Your tasks:</h4>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let task of taskList" [dragula]='"first-bag"'>
+      <div class="col s4">
+        <div *ngIf="task.completed == false" class="card-panel taskcard">
+          <div class="card-title">
+            <span class="task-title">
+            <b>
+                {{task.title}}
+            </b>
+          </span>
+            <span *ngIf="task.dueDate" class="timecontainer">
+            <i class="material-icons tiny">access_time</i>
+            {{task.dueDate | date: "shortTime"}}
+          </span>
+
+          </div>
+
+          <br /><br />
+
+          <div class="card-content">
+            {{task.description}}
+            <div *ngIf="task.repeatDays.length > 1">
+              <div class="repeat">
+                <i>Repeats every {{task.repeatDays.slice(0, task.repeatDays.length-1).join(", ") + " and " + task.repeatDays[task.repeatDays.length-1]}}</i>
+              </div>
+            </div>
+
+            <div *ngIf="task.repeatDays.length == 1">
+              <div class="repeat">
+                <i>Repeats every {{task.repeatDays}}</i>
+              </div>
+            </div>
+
+            <div *ngIf="task.repeatDays.length == 0" class="repeat">
+              <i>No repeats</i>
+            </div>
+          </div>
+
+          <div class="btndiv">
+            <div class="btn task-btn">
+              {{task.completed == true ? "Revert" : "Complete"}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let task of taskList" [dragula]='"second-bag"'>
+      <div class="col s4">
+        <div *ngIf="task.completed == true" class="card-panel taskcard completedcard">
+          <div class="card-title">
+            <span class="task-title">
+            <b>
+                {{task.title}}
+            </b>
+          </span>
+            <span *ngIf="task.dueDate" class="timecontainer">
+            <i class="material-icons tiny">access_time</i>
+            {{task.dueDate | date: "shortTime"}}
+          </span>
+
+          </div>
+
+          <br /><br />
+
+          <div class="card-content">
+            {{task.description}}
+            <div *ngIf="task.repeatDays.length > 1">
+              <div class="repeat">
+                <i>Repeats every {{task.repeatDays.slice(0, task.repeatDays.length-1).join(", ") + " and " + task.repeatDays[task.repeatDays.length-1]}}</i>
+              </div>
+            </div>
+
+            <div *ngIf="task.repeatDays.length == 1">
+              <div class="repeat">
+                <i>Repeats every {{task.repeatDays}}</i>
+              </div>
+            </div>
+
+            <div *ngIf="task.repeatDays.length == 0" class="repeat">
+              <i>No repeats</i>
+            </div>
+          </div>
+
+          <div class="btndiv">
+            <div class="btn task-btn completed-btn">
+              {{task.completed == true ? "Revert" : "Complete"}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<a href="/task" class="btn-floating btn-large waves-effect waves-light right btn-add"><i class="material-icons">add</i></a>

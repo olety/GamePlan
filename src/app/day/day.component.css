@@ -1,0 +1,81 @@
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 95%;
+  height: 30px;
+  /*text-align: center;*/
+}
+
+progress::-webkit-progress-value {
+    background: #23BE45;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress:before {
+  content: attr(value)'/'attr(max) " Tasks";
+  position: relative;
+  /*left: 2.5%;*/
+  top: 2.2vh;
+  color: #303231;
+}
+
+.unique:before {
+  content: attr(data-label);
+}
+
+.timecontainer {
+    display: inline-block;
+    position: absolute;
+    /*font-size: 1.3vh;*/
+    right: 1.5vh;
+    top: 2vh;
+}
+
+.task-title {
+    display: inline-block;
+    position: absolute;
+    font-size: 20px;
+    top: 1.5vh;
+    word-wrap: break-word;
+}
+
+.taskcard {
+    height: 300px;
+    position: relative;
+}
+
+.completedcard {
+    background-color: #DBD8D8;
+}
+
+.repeat {
+    position: absolute;
+    bottom: 6vh;
+}
+
+.btndiv {
+    text-align: left;
+}
+
+.task-btn{
+    position: absolute;
+    width: 91.5%;
+    left: 4.25%;
+    bottom: 1vh;
+}
+
+.completed-btn{
+    background-color: #969696;
+}
+
+.btn-add {
+    bottom: 8vh;
+    right: 3vh;
+}

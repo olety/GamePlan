@@ -1,0 +1,13 @@
+.biginp {
+    text-align: center;
+}
+
+.bigbutton {
+    position: relative;
+    width: 100%;
+}
+
+.cancellink {
+    text-decoration: none;
+    color:black !important; 
+}
