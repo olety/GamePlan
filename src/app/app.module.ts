@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule } from 'angular-calendar';
 import { NgxPaginationModule }  from 'ngx-pagination';
 import { MaterializeModule } from 'angular2-materialize';
-
 import { DragulaModule } from 'ng2-dragula';
 import { AppComponent } from './app.component';
 import { DayComponent } from './day/day.component';
