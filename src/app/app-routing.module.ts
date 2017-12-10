@@ -8,6 +8,7 @@ import { LoginComponent }       from './login/login.component';
 import { RegisterComponent }    from './register/register.component';
 import { TaskComponent } from './task/task.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
+import { TaskCalComponent } from './task-cal/task-cal.component';
 
 const routes: Routes = [
     { path: 'shop', component: ShopComponent },
