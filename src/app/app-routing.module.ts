@@ -17,7 +17,8 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'task', component: TaskComponent },
-    { path: 'task_edit', component: TaskEditComponent }
+    { path: 'task_edit', component: TaskEditComponent },
+    { path: 'task_cal', component: TaskCalComponent }
 ];
 
 @NgModule({

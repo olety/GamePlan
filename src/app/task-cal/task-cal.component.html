@@ -1,0 +1,71 @@
+<br />
+<div class="container" style="border: 1px solid; box-shadow: 0 1px 3px rgba(0,0,0.3); width:50%;">
+  <div class="row">
+    <form class="col s8 offset-s2">
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <h1>Edit task</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Task title" value="Mop the floor" id="title" type="text" class="validate">
+          <label for="id">Task name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="desc" type="text" class="validate" placeholder="Don't forget the kitchen!" value="Don't forget the kitchen!">
+          <label for="desc">Description</label>
+        </div>
+      </div>
+      <label for="repeats">Repeats</label>
+      <div id="repeats" class="row"></div>
+      <div class="row">
+        <div class="col s12">
+          <input type="checkbox" id="cb1" />
+          <label for="cb1">Mon</label> &nbsp;
+          <input type="checkbox" id="cb2" />
+          <label for="cb2">Tue</label> &nbsp;
+          <input type="checkbox" id="cb3" />
+          <label for="cb3">Wed</label> &nbsp;
+          <input type="checkbox" id="cb4" />
+          <label for="cb4">Thu</label> &nbsp;
+          <input type="checkbox" id="cb5" />
+          <label for="cb5">Fri</label> &nbsp;
+          <input type="checkbox" id="cb6" />
+          <label for="cb6">Sat</label> &nbsp;
+          <input type="checkbox" id="cb7" />
+          <label for="cb7">Sun</label>
+        </div>
+      </div>
+      <div id="time" class="row">
+        <div class="col s4">
+          <label for="datepicker">Due date</label>
+          <input type="text" placeholder="04/12/2017" value="04/12/2017" id="datepicker" class="datepicker">
+
+        </div>
+        <div class="col s3">
+          <label for="timepicker">Due time</label>
+          <input type="text" placeholder="23:55" value="23:55" id="timepicker" class="timepicker">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <a href="/calendar" class="waves-effect waves-light bigbutton green btn">Save Task</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <a href="/calendar" class="waves-effect waves-light bigbutton btn red">Delete</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center">
+          <a href="/calendar" class="waves-effect waves-light bigbutton greybutton btn">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
