@@ -1,16 +1,16 @@
 <div class="login-page">
-    <h1><i>Gamify your everyday tasks!</i></h1>
-    <div class="form">
-      <div>
-        <form class="login-form">
-          <h2>login</h2>
-          <input type="text" placeholder="user name" />
-          <input type="password" placeholder="password" />
-          <a routerLink="/day" onclick="document.getElementsByClassName('signin')[0].style.visibility = 'visible'; document.getElementsByTagName('nav')[0].style.visibility = 'visible'"><button>login</button></a>
-          <p class="message">
-            Not Registered? <a routerLink="/register" href="#">Register</a>
-          </p>
-        </form>
-      </div>
+  <h1><i>Gamify your everyday tasks!</i></h1>
+  <div class="form">
+    <div>
+      <form class="login-form">
+        <h2>login</h2>
+        <input type="text" placeholder="user name" />
+        <input type="password" placeholder="password" />
+        <a href="/day" onclick="document.getElementsByClassName('signin')[0].style.visibility = 'visible'; document.getElementsByTagName('nav')[0].style.visibility = 'visible'"><button>login</button></a>
+        <p class="message">
+          Not Registered? <a href="/register">Register</a>
+        </p>
+      </form>
     </div>
   </div>
+</div>
