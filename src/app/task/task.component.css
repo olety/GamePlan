@@ -7,7 +7,14 @@
     width: 100%;
 }
 
+.greybutton {
+    background-color: #F8F8F8;
+}
+.blacktext {
+    color:black !important;
+}
+
 .cancellink {
     text-decoration: none;
-    color:black !important; 
+
 }

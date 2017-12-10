@@ -1,0 +1,18 @@
+.biginp {
+    text-align: center;
+}
+
+.bigbutton {
+    position: relative;
+    width: 100%;
+}
+
+.greybutton {
+    background-color: #F8F8F8;
+    color:black !important;
+}
+
+.cancellink {
+    text-decoration: none;
+
+}

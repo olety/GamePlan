@@ -11,6 +11,16 @@
 </div>
 
 <span class="btn" routerLink="/shop" style="float: right; margin-right: 18%">Themes</span>
+<span class='dropdown-button btn' style="float: right; margin-right: 10px" data-activates='dropdown1'>Sort</span>
+<!-- Dropdown Trigger -->
+
+
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+  <li><a href="/day" style="color:black !important;">Due time</a></li>
+  <li><a href="/day" style="color:black !important;">Repeats</a></li>
+  <li><a href="/day" style="color:black !important;">Name</a></li>
+</ul>
 
 <div class="container">
   <!-- Progress bar -->
@@ -23,7 +33,6 @@
     </div>
   </div>
 </div>
-
 <br />
 
 <div class="container">
@@ -31,6 +40,7 @@
   <div class="row">
     <div>
       <h4>Your tasks:</h4>
+
     </div>
   </div>
 </div>
@@ -43,9 +53,11 @@
         <div *ngIf="task.completed == false" class="card-panel taskcard">
           <div class="card-title">
             <span class="task-title">
-            <b>
-                {{task.title}}
-            </b>
+            <a href="/task_edit" class="tasklink">
+
+                    {{task.title}}
+
+            </a>
           </span>
             <span *ngIf="task.dueDate" class="timecontainer">
             <i class="material-icons tiny">access_time</i>
@@ -139,4 +151,4 @@
 
 
 
-<a class="btnnt" routerLink="/task"><img src="../../assets/ic_add_circle_black_24px.svg" height="40" width="40" /></a>
+<a class="btnnt" routerLink="/task"><img src="../../assets/ic_add_circle_black_24px.svg" height="60" width="60"/></a>

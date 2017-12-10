@@ -87,3 +87,7 @@ progress:before {
   bottom: 50px;
   cursor: pointer;
 }
+
+.tasklink {
+    color: black !important;
+}

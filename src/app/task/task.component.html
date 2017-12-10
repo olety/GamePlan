@@ -3,13 +3,15 @@
   <div class="row">
     <form class="col s8 offset-s2">
       <div class="row">
-        <div class="input-field col s6 offset-s3">
-          <input placeholder="Task title" value="Mop the floor" id="title" type="text" class="validate biginp">
+        <div class="col s6 offset-s3">
+          <h1>Add task</h1>
         </div>
-        <div class="input-field col s3 ">
-          <i class="material-icons prefix">mode_edit</i>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Mop the floor" id="title" type="text" class="validate">
+          <label for="id">Task name</label>
         </div>
-
       </div>
       <div class="row">
         <div class="input-field col s12">
@@ -18,8 +20,9 @@
         </div>
       </div>
       <label for="repeats">Repeats</label>
-      <div id="repeats" class="row">
-        <div class="col s12 center">
+      <div id="repeats" class="row"></div>
+      <div class="row">
+        <div class="col s12">
           <input type="checkbox" id="cb1" />
           <label for="cb1">Mon</label> &nbsp;
           <input type="checkbox" id="cb2" />
@@ -36,18 +39,21 @@
           <label for="cb7">Sun</label>
         </div>
       </div>
-      <label for="time">Due on</label>
       <div id="time" class="row">
         <div class="col s4">
-          <input type="text" id="timepicker" class="timepicker">
+          <label for="datepicker">Due date</label>
+          <input type="text" placeholder="04/12/2017" id="datepicker" class="datepicker">
+
         </div>
         <div class="col s3">
-          <input type="text" id="timepicker" class="timepicker">
+          <label for="timepicker">Due time</label>
+          <input type="text" placeholder="23:55" id="timepicker" class="timepicker">
+
         </div>
       </div>
       <div class="row">
         <div class="col s12">
-          <a href="/day" class="waves-effect waves-light bigbutton btn">Save Task</a>
+          <a href="/day" class="waves-effect waves-light bigbutton green btn">Save Task</a>
         </div>
       </div>
       <div class="row">
@@ -57,7 +63,7 @@
       </div>
       <div class="row">
         <div class="col s12 center">
-          <a href="/day" class="cancellink">Cancel</a>
+          <a href="/day" class="waves-effect waves-light bigbutton greybutton blacktext btn">Cancel</a>
         </div>
       </div>
     </form>

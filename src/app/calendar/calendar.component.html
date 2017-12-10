@@ -23,21 +23,13 @@
 <div class="row text-center" style="display: inline-flex; margin-bottom: 26px; width: 100%">
   <div class="col-md-4" style="margin: auto; font-weight: bold">
     <div class="btn-group">
-      <div class="btn btn-primary" style="margin-left: 310px; margin-top:36px; cursor: pointer"
-           mwlCalendarPreviousView
-           [view]="view"
-           [(viewDate)]="viewDate"
-           (viewDateChange)="activeDayIsOpen = false">
+      <div class="btn btn-primary" style="margin-left: 310px; margin-top:36px; cursor: pointer" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="activeDayIsOpen = false">
         <div><img src="../../assets/ic_keyboard_arrow_left_black_24px.svg" style="vertical-align: top" /></div>
       </div>
       <div class="col-md-4" style="margin-left: 435px; margin-top: -40px">
         <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
       </div>
-      <div class="btn btn-primary" style="margin-left: 660px; margin-top: -45px; cursor: pointer"
-           mwlCalendarNextView
-           [view]="view"
-           [(viewDate)]="viewDate"
-           (viewDateChange)="activeDayIsOpen = false">
+      <div class="btn btn-primary" style="margin-left: 660px; margin-top: -45px; cursor: pointer" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="activeDayIsOpen = false">
         <div><img src="../../assets/ic_keyboard_arrow_right_black_24px.svg" style="vertical-align: top" /></div>
       </div>
     </div>
@@ -45,19 +37,13 @@
 
   <div class="col-md-4">
     <div class="btn-group" style="display: inline-flex; margin-top: 36px; margin-left: 188px; background-color: violet; font-weight: bold">
-      <div class="btn btn-primary" style="cursor: pointer"
-           (click)="view = 'month'"
-           [class.active]="view === 'month'">
+      <div class="btn btn-primary" style="cursor: pointer" (click)="view = 'month'" [class.active]="view === 'month'">
         Month
       </div>
-      <div class="btn btn-primary" style="margin-left: 30px; cursor: pointer"
-           (click)="view = 'week'"
-           [class.active]="view === 'week'">
+      <div class="btn btn-primary" style="margin-left: 30px; cursor: pointer" (click)="view = 'week'" [class.active]="view === 'week'">
         Week
       </div>
-      <div class="btn btn-primary" style="margin-left: 30px; cursor: pointer"
-           (click)="view = 'day'"
-           [class.active]="view === 'day'">
+      <div class="btn btn-primary" style="display:none; margin-left: 30px; cursor: pointer" (click)="view = 'day'" [class.active]="view === 'day'">
         Day
       </div>
     </div>
@@ -65,30 +51,12 @@
 </div>
 <br>
 <div [ngSwitch]="view">
-  <mwl-calendar-month-view *ngSwitchCase="'month'"
-                           [viewDate]="viewDate"
-                           [events]="events"
-                           [refresh]="refresh"
-                           [activeDayIsOpen]="activeDayIsOpen"
-                           (dayClicked)="dayClicked($event.day)"
-                           (eventClicked)="handleEvent('Clicked', $event.event)"
-                           (eventTimesChanged)="eventTimesChanged($event)">
+  <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
   </mwl-calendar-month-view>
-  <mwl-calendar-week-view *ngSwitchCase="'week'"
-                          [viewDate]="viewDate"
-                          [events]="events"
-                          [refresh]="refresh"
-                          (eventClicked)="handleEvent('Clicked', $event.event)"
-                          (eventTimesChanged)="eventTimesChanged($event)">
+  <mwl-calendar-week-view *ngSwitchCase="'week'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
   </mwl-calendar-week-view>
-  <mwl-calendar-day-view *ngSwitchCase="'day'"
-                         [viewDate]="viewDate"
-                         [events]="events"
-                         [refresh]="refresh"
-                         (eventClicked)="handleEvent('Clicked', $event.event)"
-                         (eventTimesChanged)="eventTimesChanged($event)">
+  <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
   </mwl-calendar-day-view>
 </div>
 
-<a class="btnnt" routerLink="/task"><img src="../../assets/ic_add_circle_black_24px.svg" height="40" width="40"/></a>
-
+<a class="btnnt" href="/task"><img src="../../assets/ic_add_circle_black_24px.svg" height="60" width="60"/></a>

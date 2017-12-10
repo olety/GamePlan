@@ -7,6 +7,7 @@ import { DayComponent }         from './day/day.component';
 import { LoginComponent }       from './login/login.component';
 import { RegisterComponent }    from './register/register.component';
 import { TaskComponent } from './task/task.component';
+import { TaskEditComponent } from './task-edit/task-edit.component';
 
 const routes: Routes = [
     { path: 'shop', component: ShopComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
     { path: 'day', component: DayComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'task', component: TaskComponent }
+    { path: 'task', component: TaskComponent },
+    { path: 'task_edit', component: TaskEditComponent }
 ];
 
 @NgModule({

@@ -18,6 +18,7 @@ import { RegisterComponent } from './register/register.component';
 import { TaskComponent } from './task/task.component';
 
 import { NgDatepickerModule } from 'ng2-datepicker';
+import { TaskEditComponent } from './task-edit/task-edit.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { NgDatepickerModule } from 'ng2-datepicker';
         CalendarComponent,
         LoginComponent,
         RegisterComponent,
-        TaskComponent
+        TaskComponent,
+        TaskEditComponent
     ],
     imports: [
         BrowserModule,
