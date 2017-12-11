@@ -3,10 +3,12 @@
   <div class="form">
     <form class="register-form">
       <h2>Register</h2>
-      <input type="text" placeholder="username" />
-      <input type="password" placeholder="password" />
-      <input type="email" placeholder="email id" />
-      <a routerLink="/login"><button>Create</button></a>
+      <input class="finput" type="text" placeholder="username" />
+      <input class="finput" type="password" placeholder="password" />
+      <input class="finput" type="email" placeholder="email id" />
+      <input onclick="location.href='/login'; document.getElementsByClassName('menu')[0].style.visibility = 'hidden';
+                  document.getElementsByClassName('signin')[0].style.visibility = 'hidden';
+                  document.getElementsByTagName('nav')[0].style.visibility = 'hidden'" type="submit" class="btnin" value="Create" />
       <p class="message">
         Already Registered? <a routerLink="/login" href="#">Log in</a>
       </p>

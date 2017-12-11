@@ -8,6 +8,10 @@ header, footer {
     background: linear-gradient(to top, black, grey);
 }
 
+:host (.hide_me){
+
+}
+
 header {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
     font-size: 14px;
