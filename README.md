@@ -6,7 +6,9 @@ This project was developed for the course "User Interface Development" at Wrocł
 
 We were given a task to create an app prototype (UI only) and test that UI with different people and use-cases.
 
-We started with selecting a "to-do list" app as our theme. We then conducted market research, asking people about their lives and taking note on what they thought about their tasks, what words they were using and whether they could benefit from a planner app such as ours. We later developed a paper UI prototype and turned it into reality with AngularJS. This repository contains our last interactive UI prototype.
+We started with selecting a "to-do list" app as our theme. We then conducted market research, asking people about their lives and taking note on what they thought about their tasks, what words they were using and whether they could benefit from a planner app such as ours. We later developed a paper UI prototype and turned it into reality with AngularJS. 
+
+This repository contains our final interactive UI prototype.
 
 ## The Team
 
